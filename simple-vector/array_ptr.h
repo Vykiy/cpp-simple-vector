@@ -34,7 +34,7 @@ public:
       raw_ptr_ = exchange(other.raw_ptr_, nullptr);
     }
     ArrayPtr& operator=(ArrayPtr&& other) {
-      swap(other.raw_ptr_);
+      spawn(other.raw_ptr_);
     }
 
     ~ArrayPtr() {
